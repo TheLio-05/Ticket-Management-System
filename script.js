@@ -10,6 +10,7 @@ document.getElementById("ticket-form").addEventListener("submit", function(event
     var date = document.getElementById("date").value;
     var from = document.getElementById("from").value;
     var to = document.getElementById("to").value;
+    var medium = document.getElementById("medium").value;
     
     // Generate ticket ID (simple demonstration)
     var ticketId = "T" + Math.floor(Math.random() * 10000);
@@ -17,7 +18,7 @@ document.getElementById("ticket-form").addEventListener("submit", function(event
     // Add ticket details to history table
     var tableBody = document.getElementById("history-table-body");
     var newRow = tableBody.insertRow();
-    newRow.innerHTML = "<td>" + ticketId + "</td><td>" + name + "</td><td>" + seat + "</td><td>" + date + "</td><td>" + from + "</td><td>" + to + "</td><td>Booked</td><td><button class='delete-btn' data-ticket-id='" + ticketId + "'>Delete</button></td>";
+    newRow.innerHTML = "<td>" + ticketId + "</td><td>" + name + "</td><td>" + seat + "</td><td>" + date + "</td><td>" + from + "</td><td>" + to + "</td><td>" + medium + "</td><td>Booked</td><td><button class='delete-btn' data-ticket-id='" + ticketId + "'>Delete</button></td>";
 
     // Display alert for successful booking and generated ticket ID
     alert("Ticket with ID " + ticketId + " has been booked successfully.");
@@ -36,5 +37,6 @@ document.getElementById("ticket-history").addEventListener("click", function(eve
         alert("Ticket with ID " + ticketIdToDelete + " has been deleted.");
     }
 });
+
 
 
