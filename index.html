@@ -18,6 +18,12 @@
         <input type="date" id="date" required><br>
         <input type="text" id="from" placeholder="From Location" required><br>
         <input type="text" id="to" placeholder="To Location" required><br>
+        <select id ="medium" required>
+	<option value="">Choose medium</option>
+	<option value="Bus">Bus</option>
+	<option value="Train">Train</option>
+	<option value="Flight">Flight</option>
+	</select>
         <input type="submit" value="Book Ticket">
     </form>
     <button id="view-history-btn">View History</button>
@@ -34,6 +40,7 @@
                 <th>Date</th>
                 <th>From Location</th>
                 <th>To Location</th>
+                <th>Medium</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -47,3 +54,4 @@
 
 </body>
 </html>
+
